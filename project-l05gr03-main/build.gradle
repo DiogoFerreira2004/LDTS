@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'info.solidsoft.pitest' version '1.15.0'
+}
+
+mainClassName = 'org.ldts.trynastower.Game'
+group = 'org.ldts.trynastower'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+pitest {
+    junit5PluginVersion = '1.1.2'
+}
+
+dependencies {
+    testImplementation(platform('org.junit:junit-bom:5.10.1'))
+    testImplementation('org.junit.jupiter:junit-jupiter')
+    testImplementation 'org.mockito:mockito-core:5.8.0'
+    testImplementation 'net.jqwik:jqwik:1.5.1'
+
+    implementation group: 'com.googlecode.lanterna', name: 'lanterna', version: '3.1.1'
+}
+
+test {
+    useJUnitPlatform {
+        includeEngines('junit-jupiter', 'jqwik')
+    }
+}
