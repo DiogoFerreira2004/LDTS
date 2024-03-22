@@ -11,4 +11,4 @@ I hope you enjoy it!
 
 ### Developed by:
 
-1. Diogo Ferreira - E-mail: diogomfferreira2004@gmail.com
+Diogo Ferreira - E-mail: diogomfferreira2004@gmail.com
